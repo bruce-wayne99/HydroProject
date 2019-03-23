@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block content %}
+
+<form>
+	<fieldset>
+	<table class="table">
+		<tr>
+			<td>
+				<div class="form-group">
+			      	<label for="seasonal">Seasonal</label>
+			      	<select class="form-control" id="seasonal">
+				        <option value="spi">Standardized Precipitation Index (SPI) </option>
+				        <!-- <option>Standardized Precipitation Evapotranspiration Index (SPEI) </option>
+				        <option>Standardized Runoff Index (SRI) </option>
+				        <option>Standardized Soil Moisture Index (SSI) </option>
+				        <option>Aridity Index</option> -->
+			      	</select>
+			    </div>
+			</td>
+			<td>
+				<div class="form-group">
+			      	<label for="visualization">Visualization</label>
+			      	<select class="form-control" id="visualization">
+				        <option value="spi">Temporal Graph</option>
+				        <option value="hist">Histogram</option>
+				        <option value="Inter">Interpolation</option>
+			      	</select>
+			    </div>
+			</td>
+			<td>
+			    <div class="form-group">
+			      	<label for="region">Region</label>
+			      	<select class="form-control" id="region">
+				        <option value="global">Global</option>
+				        <option value="station_1">Station-1</option>
+				        <option value="station_2">Station-2</option>
+				        <option value="station_3">Station-3</option>
+				        <option value="station_4">Station-4</option>
+				        <option value="station_5">Station-5</option>
+				        <option value="station_6">Station-6</option>
+				        <option value="station_7">Station-7</option>
+				        <option value="station_8">Station-8</option>
+				        <option value="station_9">Station-9</option>
+				        <option value="station_10">Station-10</option>
+				        <option value="station_11">Station-11</option>
+				        <option value="station_12">Station-12</option>
+				        <option value="station_13">Station-13</option>
+				        <option value="station_14">Station-14</option>
+				        <option value="station_15">Station-15</option>
+				        <option value="station_16">Station-16</option>
+				        <option value="station_17">Station-17</option>
+				        <option value="station_18">Station-18</option>
+				        <option value="station_19">Station-19</option>
+				        <option value="station_20">Station-20</option>
+				        <option value="station_21">Station-21</option>
+				        <option value="station_22">Station-22</option>
+			      	</select>
+			    </div>
+			</td>
+			<td>
+			    <div class="form-group">
+			      	<label for="variable">Variable</label>
+			      	<select class="form-control" id="variable">
+				        <option value="1">1-Month</option>
+				        <option value="3">3-Month</option>
+				        <option value="6">6-Month</option>
+				        <option value="12">12-Month</option>
+				        <option value="24">24-Month</option>
+			      	</select>
+			    </div>
+			</td>
+			<td>
+				<div class="form-group">
+					<br/>
+					<button type="button" class="btn btn-primary" id="submitButton">Submit</button>
+				</div>
+			</td>
+		</tr>
+	</table>
+	<div style="text-align: center;">
+		<img src="" alt="" id="resultImage"/>
+	</div>
+	</fieldset>
+</form>
+
+<!-- Script Part -->
+<script src="{% static 'js/models.js' %}"></script>
+<script type="text/javascript">models.init(); </script>
+
+{% endblock content %}

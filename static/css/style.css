@@ -1,0 +1,10 @@
+#submitButton {
+	height: 45px;
+	width: 80px;
+}
+
+body {
+    background-image: url('/static/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
