@@ -3,8 +3,38 @@
 	width: 80px;
 }
 
+#predictButton {
+	height: 45px;
+	width: 80px;
+}
+
+#addDataBtn {
+	height: 45px;
+	width: 80px;
+}
+
 body {
     background-image: url('/static/background.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+label {
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.board {
+	font-weight: bold;
+	font-size: 20px;
+}
+
+#resultStatement {
+	font-size: 22px;
+}
+
+#resultPrediction {
+	font-size: 22px;
+	color: red;
+	font-weight: bold;
 }

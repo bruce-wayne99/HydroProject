@@ -2,6 +2,9 @@
 {% load staticfiles %}
 {% block content %}
 
+<br/>
+<h3 style="text-align: center"> Graph visualizations </h3>
+<br/>
 <form>
 	<fieldset>
 	<table class="table">
@@ -11,10 +14,10 @@
 			      	<label for="seasonal">Seasonal</label>
 			      	<select class="form-control" id="seasonal">
 				        <option value="spi">Standardized Precipitation Index (SPI) </option>
-				        <!-- <option>Standardized Precipitation Evapotranspiration Index (SPEI) </option>
-				        <option>Standardized Runoff Index (SRI) </option>
-				        <option>Standardized Soil Moisture Index (SSI) </option>
-				        <option>Aridity Index</option> -->
+				        <option value="spei">Standardized Precipitation Evapotranspiration Index (SPEI) </option>
+				        <option value="sri">Standardized Runoff Index (SRI) </option>
+				        <!-- <option>Standardized Soil Moisture Index (SSI) </option> -->
+				        <!-- <option>Aridity Index</option> -->
 			      	</select>
 			    </div>
 			</td>
@@ -22,9 +25,9 @@
 				<div class="form-group">
 			      	<label for="visualization">Visualization</label>
 			      	<select class="form-control" id="visualization">
-				        <option value="spi">Temporal Graph</option>
+				        <option value="temp">Temporal Graph</option>
 				        <option value="hist">Histogram</option>
-				        <option value="Inter">Interpolation</option>
+				        <option value="inter">Interpolation</option>
 			      	</select>
 			    </div>
 			</td>
@@ -79,7 +82,7 @@
 		</tr>
 	</table>
 	<div style="text-align: center;">
-		<img src="" alt="" id="resultImage"/>
+		<img src="" alt="" id="resultImage" height="600" width="1000"/>
 	</div>
 	</fieldset>
 </form>
